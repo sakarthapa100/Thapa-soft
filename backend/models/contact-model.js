@@ -9,6 +9,6 @@ message:{ type: String, require:true},
 })
 
 //creae a model or collection
-const Contact = new model("Contact", contactSchema)
+const Contact = mongoose.model("Contact", contactSchema);
 
 model.exports = Contact

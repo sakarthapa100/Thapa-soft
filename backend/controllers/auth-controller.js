@@ -98,7 +98,20 @@ res.status(500).json("Internal server error ")
 
 }
 
+/*
+it is used to send the data to the user 
+user logic
+*/
+const user =async(req, res) => {
+try {
+   const userData = req.user
+console.log(userData)
+res.status(200).json({ msg: userData})
+
+} catch (error) {
+  console.log(`error from the user route ${error}`)
+}
+}
 
 
-
-module.exports= {home, register , login}
+module.exports= {home, register , login, user}
