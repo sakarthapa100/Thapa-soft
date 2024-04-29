@@ -6,7 +6,7 @@ const authrouter = require('./router/auth-router')
 const contactRoute = require("./router/contact-router")
 const connectdb = require('./utils/db')
 const errorMiddleware = require("./middlewares/error-middleware")
- 
+ const adminRoute = require("./router/admin-router")
 //handeling cors policy
 const corsOptions = {
   origin:"http://localhost:5173",
@@ -25,6 +25,8 @@ app.use(express.json())
 //route path
 app.use('/api/auth', authrouter)
 app.use("/api/form", contactRoute)
+app.use("/api/admin", adminRoute)
+
 
 app.use(errorMiddleware)
 
