@@ -4,16 +4,18 @@ const cors = require("cors")
 const app= express()
 const authrouter = require('./router/auth-router')
 const contactRoute = require("./router/contact-router")
+const serviceRoute = require("./router/service-router")
 const connectdb = require('./utils/db')
 const errorMiddleware = require("./middlewares/error-middleware")
  const adminRoute = require("./router/admin-router")
 //handeling cors policy
 const corsOptions = {
-  origin:"http://localhost:5173",
-  methods:"GET, POST, PUT, DELETE, PATCH, HEAD",
-  credentials:true
-}
-app.use(cors(corsOptions))
+  origin: "http://localhost:5173",
+  methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+  credentials: true
+};
+app.use(cors(corsOptions));
+
 
 
 //middleware for the 
@@ -25,6 +27,7 @@ app.use(express.json())
 //route path
 app.use('/api/auth', authrouter)
 app.use("/api/form", contactRoute)
+app.use("/api/data", serviceRoute)
 app.use("/api/admin", adminRoute)
 
 

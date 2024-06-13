@@ -1,14 +1,11 @@
+const mongoose = require('mongoose');
 
-const {Schema, model, default: mongoose} = require("mongoose")
+const contactSchema = new mongoose.Schema({
+  username: { type: String, required: true },
+  email: { type: String, required: true },
+  message: { type: String, required: true }
+});
 
-const contactSchema = new Schema({
-username:{ type: String, require:true},
-email:{ type: String, require:true},
-message:{ type: String, require:true},
+const Contact = mongoose.model('Contact', contactSchema);
 
-})
-
-//creae a model or collection
-const Contact = mongoose.model("Contact", contactSchema);
-
-model.exports = Contact
+module.exports = Contact;
