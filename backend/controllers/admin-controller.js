@@ -28,4 +28,33 @@ return     res.status(404).json({message :"No Contacts Found"})
   }
 }
 
-module.exports= {getAllusers,getAllContacts}
+const getUserById = async (req,res,next) =>{
+  try {
+    const id = req.params.id
+    const user = await User.findOne({_id:id}, {password:0})
+
+    return res.status(200).json(user)
+  } catch (error) {
+   
+    next(error)
+  }
+}
+
+const deleteUser = async (req,res,next) =>{
+  try {
+    const id = req.params.id
+    const user = await User.findByIdAndDelete(id)
+    if(!user){
+      return res.status(404).json({message : "User Not Found"})
+    }
+    return res.status(200).json({message : "User Deleted"})
+  } catch (error) {
+   
+    next(error)
+  }
+}
+
+
+
+
+module.exports= {getAllusers,getAllContacts, deleteUser,getUserById}
