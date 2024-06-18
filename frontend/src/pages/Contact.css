@@ -1,0 +1,70 @@
+.section-contact {
+  & .contact-content {
+    padding: 0;
+
+    & h1 {
+      margin-bottom: 3.2rem;
+    }
+  }
+  & .container {
+    padding-top: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & .grid-two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 800px;
+  }
+  & .contact-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  & .section-form {
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    & label {
+      display: block;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+
+    & input,
+    textarea,
+    button {
+      padding: 0.8rem;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    & input#email {
+      width: 80%; /* Adjust the width of the email input field */
+    }
+
+    & button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+& input,
+textarea {
+  width: 90%;
+  padding: 0.8rem;
+
+
+  font-size: 0.5rem;
+}
