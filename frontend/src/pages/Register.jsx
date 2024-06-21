@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../store/auth';
 import { toast } from 'react-toastify';
-
+import './Register.css'
 export const Register = () => {
 
   const [user, setUser] = useState({
@@ -82,7 +82,7 @@ if(response.ok){
 
 {/* //right side registration from  */}
 <div className="registration-form">
-  <h1 className='main-heading mb-3'> registration form</h1>
+  <h1 className='main-heading mb-3'> Registration form</h1>
   <br />
 <form onSubmit={handleSubmit}>
   <div>
@@ -139,7 +139,7 @@ if(response.ok){
       />
   </div>
 <br />
-<button type='submit' className='btn btn-submit'>Register Now</button>
+<button type='submit' className='btn-submit'>Register Now</button>
 
 </form>
 

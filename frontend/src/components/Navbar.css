@@ -1,0 +1,82 @@
+/* Import a Google Font for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #282c34;
+  padding: 1rem 0;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  height: 10rem;
+}
+
+.container {
+  max-width: 140rem;
+  padding: 4.2rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.logo-brand a {
+  font-size: 2.4rem;
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.logo-brand a:hover {
+  color: #21a1f1;
+}
+/* 
+nav {
+  flex: 1;
+  text-align: right;
+} */
+
+ul {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul a {
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+ul a:hover {
+  color: #61dafb;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  ul a {
+    font-size: 2rem;
+  }
+}

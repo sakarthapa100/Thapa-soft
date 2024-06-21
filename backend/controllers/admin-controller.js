@@ -39,6 +39,21 @@ const getUserById = async (req,res,next) =>{
     next(error)
   }
 }
+const updateUserById = async(req, res, next) => {
+  try {
+    const id = req.params.id
+    const updatedUserData = req.body
+
+const updateData = await User.updateOne({_id:id}, {$set: updatedUserData,})
+
+return res.status(200).json({message:"User Deleted Successfully"})
+
+  } catch (error) {
+    next(error)
+  }
+}
+
+
 
 const deleteUser = async (req,res,next) =>{
   try {
@@ -55,6 +70,21 @@ const deleteUser = async (req,res,next) =>{
 }
 
 
+const deleteContactById = async (req,res,next) =>{
+  try {
+    const id = req.params.id
+    const user = await Contact.findByIdAndDelete(id)
+    if(!user){
+      return res.status(404).json({message : "Contact Not Found"})
+    }
+    return res.status(200).json({message : "Contact Deleted"})
+  } catch (error) {
+   
+    next(error)
+  }
+}
 
 
-module.exports= {getAllusers,getAllContacts, deleteUser,getUserById}
+
+
+module.exports= {getAllusers,getAllContacts, deleteUser,getUserById, updateUserById, deleteContactById}

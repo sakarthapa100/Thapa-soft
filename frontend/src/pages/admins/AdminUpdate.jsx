@@ -10,12 +10,7 @@ export const AdminUpdate = () => {
     phone: "",
   });
 
-  const handleInput = (e) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
-  }
+
   const params = useParams();
   console.log("Params single users",params);
   const { authorizationToken } = useAuth() // Call useAuth inside the component
@@ -44,16 +39,52 @@ useEffect(()=>{
   getSingleUserData()
 }, [])
 
+  const handleInput = (e) => {
+    let name = e.target.name
+    let value = e.target.value
+
+
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+  }
+const handleSubmit = async(e) => {
+  e.preventDefault()
+  try {
+    
+    const response = await fetch(`http://localhost:3000/api/admin/users/update/${params.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: authorizationToken ,
+      },
+      body:JSON.stringify(data)
+    }
+
+  ) 
+  if(response.ok){
+      alert("Updatted succesfully")
+  }else{
+    alert("Not updatee sucessfull")
+  }
+ 
+  } catch (error) {
+    console.log(error)
+  }
+} 
+
+
   return (
     <section>
       <main>
-        <div className="section-data">
-          <div className="data-content container">
-            <h1 className="main-heading">Update User Data</h1>
+        <div className="sectionupdate-data">
+          <div className="data-content ">
+            <h1 className="main-titleheading">Update User Data</h1>
           </div>
-          <div className="container grid grid-two-cols">
+          <div className=" grid grid-two-cols">
             <section>
-              <form>
+              <form onSubmit={handleSubmit }>
                 <div className="form-group">
                   <label htmlFor="username">Username</label>
                   <input

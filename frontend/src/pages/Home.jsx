@@ -1,4 +1,6 @@
 import { Analytics } from "../components/Analytics";
+import './Home.css'
+import Testi from "../components/Testi";
 
 export const Home = () => {
   return (
@@ -14,7 +16,7 @@ export const Home = () => {
               </p>
               <div className="btn btn-group">
                 <a href="/contact">
-                  <button className="btn">connect now</button>
+                  <button className="connect-btn">connect now</button>
                 </a>
                 <a href="/services">
                   <button className="btn secondary-btn">learn more</button>
@@ -36,8 +38,10 @@ export const Home = () => {
       </main>
 
       {/* 2nd section  */}
-      <Analytics />
 
+
+<Testi />
+      <Analytics />
       {/* 3rd section  */}
       <section className="section-hero">
         <div className="container grid grid-two-cols">
@@ -62,7 +66,7 @@ export const Home = () => {
             </p>
             <div className="btn btn-group">
               <a href="/contact">
-                <button className="btn">connect now</button>
+                <button className="connect-btn">connect now</button>
               </a>
               <a href="/services">
                 <button className="btn secondary-btn">learn more</button>

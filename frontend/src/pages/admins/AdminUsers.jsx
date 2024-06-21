@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import { useAuth } from '../../store/auth'
 import { Link } from 'react-router-dom'
+import './AdminUsers.css'
 
  export const AdminUsers = () => {
   const [ users, setUsers ] = useState([])
@@ -45,10 +46,10 @@ import { Link } from 'react-router-dom'
 
   return <>
   <section className='admin-users-section'>
-<div className="container">
+<div className="containers">
   <h1>Admin Users Data</h1>
 </div>
-<div className='container admin-users'>
+<div className=' admin-users'>
 
   <table>
     <thead>
@@ -80,4 +81,3 @@ import { Link } from 'react-router-dom'
   </>
   
 }
-

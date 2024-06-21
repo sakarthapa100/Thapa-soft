@@ -7,9 +7,9 @@
 }
 
 :root {
-  --bg-color: #f4f3ff;
+  --bg-color: #282c34; /* dark background */
+  --text-color: #ffffff; /* light text color */
   --btn-color: #646cff;
-  --dark-color: #242424;
   --helper-color: #99b9ff;
 }
 
@@ -20,16 +20,15 @@ html {
 /*? base style */
 
 body {
-  margin: 0;
- 
- 
-  min-height: 120vh;
+  margin: 10rem;
+  min-height: 450vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-
-
 h1 {
-  font-size: 5.4rem;
+  color: var(--text-color);
+  font-size: 5.7rem;
   line-height: 1.1;
   font-weight: bold;
 }
@@ -39,7 +38,8 @@ li,
 label,
 input,
 textarea {
-  font-size: 1.8rem;
+  color: var(--text-color);
+  font-size: 2rem;
   line-height: 1.56;
   letter-spacing: 0.1rem;
   word-spacing: 0.06rem;
@@ -54,14 +54,14 @@ a {
 }
 
 li {
-  list-style: none; 
+  list-style: none;
 }
 
 /*? layout Rule  */
 
 .container {
-  max-width: 350rem;
-  padding: 4rem 2.4rem;
+  max-width: 160rem;
+  padding: 10rem 0rem;
   margin: 0 auto;
 }
 
@@ -106,432 +106,4 @@ button {
   margin-left: 3.2rem;
 }
 
-/***** Hero Section *****/
 
-.section-hero {
-  & .grid {
-    align-items: center;
-  }
-
-  .hero-content {
-    & p {
-      margin: 2.4rem 0 4.8rem 0;
-      &:first-child {
-        margin: 0 0 1.2rem 0;
-      }
-    }
-  }
-
-  .hero-image {
-    display: flex;
-    justify-content: center;
-    & img {
-      width: 70%;
-      height: auto;
-    }
-  }
-}
-
-/***** End Hero  *****/
-
-/***** analytics Section *****/
-
-.section-analytics {
-  margin: 9.6rem 0;
-
-  & .container {
-    background-color: var(--bg-color);
-    border-radius: 1rem;
-  }
-
-  & .grid {
-    color: var(--dark-color);
-
-    & .div1 {
-      text-align: center;
-      border-right: 0.2rem solid var(--dark-color);
-
-      &:last-child {
-        border: none;
-      }
-      & h2 {
-        font-size: 4.8rem;
-      }
-      & p {
-        text-transform: capitalize;
-      }
-    }
-  }
-}
-
-
-
-/* State rules */
-
-button:hover {
-  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
-}
-
-a:hover,
-a.active {
-  color: #535bf2;
-}
-
-/* Pseudo elements */
-
-.main-heading {
-  position: relative;
-  text-transform: capitalize;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    height: 0.5rem;
-    background-color: var(--btn-color);
-  }
-}
-
-/* Error page */
-
-#error-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#error-page .content {
-  max-width: 70rem;
-  text-align: center;
-}
-
-.content h2.header {
-  font-size: 18vw;
-  line-height: 1em;
-  animation: animate 10s ease-in-out infinite;
-  background: -webkit-repeating-linear-gradient(
-    -60deg,
-    #71b7e6,
-    var(--btn-color),
-    #b98acc,
-    #ee8176,
-    #b98acc,
-    var(--btn-color),
-    #9b59b6
-  );
-  background-size: 500%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
-  position: relative;
-  -webkit-animation: animate 10s ease-in-out infinite;
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  25% {
-    background-position: 100% 0;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-.content h4 {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-size: 2rem;
-}
-
-.content .btns {
-  margin: 25px 0;
-  display: inline-flex;
-  justify-content: center;
-}
-
-.content .btns a {
-  display: inline-block;
-  margin: 0 10px;
-  text-decoration: none;
-  border: 2px solid var(--btn-color);
-  color: var(--btn-color);
-  font-weight: 500;
-  padding: 10px 25px;
-  border-radius: 25px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.content .btns a:hover {
-  background: var(--btn-color);
-  color: #fff;
-}
-
-/** Registration section css **/
-
-.section-registration {
-  padding: 0 3.2rem;
-
-  & .container {
-    padding-top: 3.2rem;
-    align-items: center;
-
-    & img {
-      width: 80%;
-      height: auto;
-    }
-  }
-
-  & .registration-form {
-    & label {
-      display: block;
-      margin: 2.4rem 0 0.8rem 0;
-      text-transform: capitalize;
-    }
-    & input {
-      width: 80%;
-      padding: 0.6rem 0.6rem;
-    }
-
-    & button {
-      margin-top: 3.2rem;
-    }
-  }
-}
-
-.adminNav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.adminContainer {
-  display: grid;
-  padding-top: 0;
-  grid-template-columns: 1fr 3fr;
-}
-
-.adminList {
-  flex-direction: column;
-  list-style-type: none;
-}
-
-.adminList li {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-}
-
-/** Services section css **/
-
-.section-services {
-  & .container:first-child {
-    padding: 0;
-  }
-  & .grid-three-cols {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3.2rem;
-  }
-
-  & .card {
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-    border: 0.2rem solid var(--helper-color);
-
-    & .card-img {
-      text-align: center;
-      & img {
-        width: 70%;
-        height: auto;
-        filter: drop-shadow(0 0 2rem 2rem #fff);
-        -webkit-filter: drop-shadow(0 0 2rem 2rem #fff);
-      }
-    }
-
-    & .card-details {
-      padding: 2.4rem;
-
-      & .grid p {
-        font-size: 1.4rem;
-      }
-
-      & h2 {
-        font-size: 3.2rem;
-        margin: 1.2rem 0 2.4rem 0;
-      }
-    }
-  }
-}
-
-
-
-
-/** Media query section css **/
-
-@media (max-width: 998px) {
-  .grid-two-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .section-services {
-    & .grid-three-cols {
-      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-    }
-  }
-
-  .section-registration {
-    & .container {
-      & .reg-img img {
-        width: 60%;
-        height: auto;
-      }
-    }
-  }
-}
-
-@media (max-width: 798px) {
-  html {
-    font-size: 56.25%;
-  }
-
-  .section-registration {
-    & .container {
-      & .reg-img img {
-        width: 50%;
-        height: auto;
-      }
-    }
-
-    & .registration-form {
-      & input {
-        width: 100%;
-        padding: 0.6rem 0.6rem;
-      }
-    }
-  }
-}
-
-/* /* General styles for the admin-users section */
-.admin-users-section {
-  font-family: Arial, sans-serif;
-}
-
-.container h1 {
-  text-align: center;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.container.admin-users {
-  width: 90%;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Table styling */
-.admin-users table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-/* Table header styling */
-.admin-users table thead tr {
-  background-color: #4CAF50;
-  color: white;
-  
-}
-
-.admin-users table thead td {
-  padding: 12px;
-  text-align: left;
-  font-weight: bold; /* Make headers bold */
-  font-size: 1.2em; /* Increase font size */
-  color: black; /* Set text color to black */
-}
-
-.admin-users table th,
-.admin-users table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  color: black;
-}
-
-/* Table row styling */
-.admin-users table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.admin-users table tbody tr:hover {
-  background-color: #ddd;
-}
-
-/* Styling for the buttons (Edit and Delete) */
-.admin-users table td {
-  position: relative;
-}
-
-.admin-users table td:last-child,
-.admin-users table td:nth-last-child(2) {
-  text-align: center;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-}
-
-.admin-users table td:last-child:hover,
-.admin-users table td:nth-last-child(2):hover {
-  color: #333;
-  text-decoration: underline;
-}
-
-/* Responsive table styling */
-@media screen and (max-width: 768px) {
-  .container.admin-users {
-    padding: 10px;
-  }
-
-  .admin-users table thead {
-    display: none;
-  }
-
-  .admin-users table, .admin-users table tbody, .admin-users table tr, .admin-users table td {
-    display: block;
-    width: 100%;
-  }
-
-  .admin-users table tr {
-    margin-bottom: 15px;
-  }
-
-  .admin-users table td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-  }
-
-  .admin-users table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 15px;
-    font-weight: bold;
-    text-align: left;
-  }
-}
- 

@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { Analytics } from "../components/Analytics.jsx";
+import './About.css'
+
 
 export const About = () => {
   return (
-    <>
+    <>    
       <main>
         <section className="section-hero">
           <div className="container grid grid-two-cols">
@@ -36,7 +38,7 @@ export const About = () => {
               </p>
               <div className="btn btn-group">
                 <NavLink to="/contact">
-                  <button className="btn"> Connect Now</button>
+                  <button className="conn-btn"> Connect Now</button>
                 </NavLink>
                 <button className="btn secondary-btn">learn more</button>
               </div>

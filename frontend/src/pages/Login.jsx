@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../store/auth';
-import {  toast } from 'react-toastify';
+import { useAuth } from "../store/auth"; // Ensure this path is correct
 
+import {  toast } from 'react-toastify';
+import './Login.css'
 
 
 export const Login = () => {
@@ -81,7 +82,7 @@ return (
           <div className="container grid grid-two-cols">
             <div className="registration-image reg-img">
               <img
-                src="/images/register.png"
+                src="/images/login.png"
                 alt="a nurse with a cute look"
                 width="400"
                 height="500"
@@ -114,7 +115,7 @@ return (
                   />
                 </div>
                 <br />
-                <button type="submit" className="btn btn-submit">
+                <button type="submit" className="btn-submit">
                   Login Now
                 </button>
               </form>

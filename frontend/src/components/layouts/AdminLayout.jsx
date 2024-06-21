@@ -4,15 +4,16 @@ import { RiUserShared2Fill } from "react-icons/ri";
 import { RiContactsBook2Fill } from "react-icons/ri";
 import { FaRegListAlt } from "react-icons/fa";
 import { IoHomeSharp } from "react-icons/io5";
-
+import './AdminLayout.css'
 
 
 
 const AdminLayout = () => {
   return <>
+  
   <header>
     <div className="container">
-      <nav>
+      <nav className='nav'>
         <ul>
           <li> <NavLink to="/admin/users"> <RiUserShared2Fill />
 

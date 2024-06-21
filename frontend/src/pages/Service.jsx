@@ -1,13 +1,14 @@
 import React from 'react';
 import { useAuth } from '../store/auth'; // Adjust the path as necessary
+import './Service.css'
 
-const Service = () => {
+export const Service = () => {
   const { services, isLoggedIn, user } = useAuth();
 
   return (
     <section className="section-services">
       <div className="container">
-        <h1 className="main-heading">Our Services</h1>
+        {/* <h1 className="main-sheading">Our Services</h1> */}
         {isLoggedIn && user && <p>Authenticated as: {user.name}</p>}
       </div>
       <div className="container grid grid-three-cols">
@@ -21,7 +22,7 @@ const Service = () => {
               <p>{service.price}</p>
             </div>
             <h2>{service.title}</h2>
-            <p>{service.description}</p>
+            <p className='des'>{service.description}</p>
           </div>
         ))}
       </div>
@@ -29,4 +30,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+

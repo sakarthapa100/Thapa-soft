@@ -1,70 +1,72 @@
 .section-contact {
-  & .contact-content {
-    padding: 0;
+  margin-top: 20rem;
 
-    & h1 {
-      margin-bottom: 3.2rem;
-    }
-  }
-  & .container {
-    padding-top: 3.2rem;
+  .container {
+    padding-top: 21rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 750px;
   }
-  & .grid-two-cols {
+
+  .grid-two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 800px;
+    gap: 20rem;
+    max-width: 1000px;
   }
-  & .contact-img {
+
+  .contact-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    & img {
+
+    img {
       max-width: 100%;
       height: auto;
     }
   }
 
-  & .section-form {
-    & form {
+  .section-form {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      margin-bottom: 3.2rem;
+    }
+
+    form {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    & label {
+
+    label {
       display: block;
       margin-bottom: 0.5rem;
       text-transform: capitalize;
+      color: #fff; /* Added to make the labels readable against the black background */
     }
 
-    & input,
+    input,
     textarea,
     button {
-      padding: 0.8rem;
-      background-color: #f0f0f0;
+      padding: 2rem; /* Increased padding for larger fields */
+      background-color: #282c34; /* Set background to black */
       border: 1px solid #ccc;
-      font-size: 1rem;
+      font-size: 1.6rem; /* Increased font size for larger text */
+      color: #fff; /* Set text color to white for readability */
+      width: 100%;
     }
 
-    & input#email {
-      width: 80%; /* Adjust the width of the email input field */
+    textarea {
+      resize: vertical;
     }
 
-    & button {
-      background-color: #007bff;
+    button {
+      background-color: #61dafb;
       color: #fff;
       cursor: pointer;
     }
   }
-}
-& input,
-textarea {
-  width: 90%;
-  padding: 0.8rem;
-
-
-  font-size: 0.5rem;
 }
