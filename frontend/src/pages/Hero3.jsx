@@ -1,10 +1,9 @@
-import { NavLink } from "react-router-dom";
-import { Analytics } from "../components/Analytics.jsx";
+import React from 'react'
 
-export const About = () => {
+const Hero3 = () => {
   return (
-    <>
-      <main>
+    <div>
+         <main>
         <section className="mt-3">
           <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -53,7 +52,8 @@ export const About = () => {
         </section>
       </main>
 
-      <Analytics />
-    </>
-  );
-};
+    </div>
+  )
+}
+
+export default Hero3

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../store/auth"; // Ensure this path is correct
-import './Contact.css'
 
 const defaultContactFormData = {
   username: "",
@@ -53,20 +52,20 @@ export const Contact = () => {
   };
 
   return (
-    <section>
-      <main>
-        <div className="section-contact">
-          <div className="container grid grid-two-cols">
-            <div className="contact-img">
-              <img src="images/support.png" alt="picture of the contact" width="400" height="400" />
+    <section className="flex justify-center items-center min-h-screen bg-gray-800 py-16 mt-[53rem] ">
+      <main className="container mx-auto">
+        <div className="bg-gray-800 p-10 rounded-lg shadow-xl max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="flex justify-center items-center">
+              <img src="images/support.png" alt="Contact us" className="max-w-full h-auto rounded-lg" />
             </div>
-            <section className="section-form">
-              <div className="header">
-                <h1>Contact Us</h1>
+            <section className="flex flex-col justify-center">
+              <div className="mb-8 text-center">
+                <h1 className="text-white text-4xl font-bold">Contact Us</h1>
               </div>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div>
-                  <label htmlFor="username">Username</label>
+                  <label htmlFor="username" className="block mb-2 text-white capitalize">Username</label>
                   <input
                     type="text"
                     name="username"
@@ -75,10 +74,11 @@ export const Contact = () => {
                     value={contact.username}
                     onChange={handleInput}
                     required
+                    className="p-2 bg-gray-800 border border-gray-600 rounded text-white w-full"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email" className="block mb-2 text-white capitalize">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -87,10 +87,11 @@ export const Contact = () => {
                     value={contact.email}
                     onChange={handleInput}
                     required
+                    className="p-2 bg-gray-800 border border-gray-600 rounded text-white w-full"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message" className="block mb-2 text-white capitalize">Message</label>
                   <textarea
                     name="message"
                     id="message"
@@ -100,10 +101,11 @@ export const Contact = () => {
                     required
                     cols="30"
                     rows="6"
+                    className="p-2 bg-gray-800 border border-gray-600 rounded text-white w-full resize-vertical"
                   />
                 </div>
                 <div>
-                  <button type="submit">Submit</button>
+                  <button type="submit" className="p-4 bg-blue-500 rounded text-white w-full hover:bg-blue-600 transition-colors duration-300">Submit</button>
                 </div>
               </form>
             </section>

@@ -14,6 +14,7 @@ import { AdminUsers } from "./pages/admins/AdminUsers";
 import { AdminContacts } from "./pages/admins/AdminContacts";
 import { AdminUpdate } from "./pages/admins/AdminUpdate";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -40,6 +41,7 @@ const App = ()=>{
 <Route path="users/:id/edit" element={<AdminUpdate />} />
         </Route>
   </Routes>
+  <Footer />
   
   </BrowserRouter>
 

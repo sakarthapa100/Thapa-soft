@@ -1,6 +1,4 @@
-// src/Testimonial.js
 import React from 'react';
-import './Testi.css';
 
 const testimonials = [
   {
@@ -27,12 +25,12 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className="testimonial-container">
+    <div className="bg-gray-800 text-white min-h-screen flex flex-col items-center py-10">
       {testimonials.map((testimonial, index) => (
-        <div key={index} className="testimonial-card">
-          <p className="testimonial-text">"{testimonial.text}"</p>
-          <p className="testimonial-name">- {testimonial.name}</p>
-          <p className="testimonial-role">{testimonial.role}</p>
+        <div key={index} className="bg-gray-800 rounded-lg p-6 m-4 max-w-lg shadow-lg transform transition-transform duration-200 hover:scale-105">
+          <p className="text-lg mb-4 leading-relaxed">"{testimonial.text}"</p>
+          <p className="font-bold mb-2">- {testimonial.name}</p>
+          <p className="italic text-gray-400">{testimonial.role}</p>
         </div>
       ))}
     </div>
