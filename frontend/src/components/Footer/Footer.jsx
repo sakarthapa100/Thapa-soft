@@ -4,13 +4,13 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className='pt-20 pb-12 bg-gray-900'>
+    <div className='pt-20 pb-12 bg-gray-700'>
       <div className='w-4/5 pb-8 border-b-2 border-gray-300 border-opacity-50 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-center'>
         {/* 1st part */}
         <div>
           <div className='flex px-13 py-5 justify-start items-center gap-3'>
             <a href="/" className='flex items-center gap-2'>
-              <GiHamburger className='text-red-500' size={30} />
+             
               <span className='text-white font-mono font-bold text-2xl sm:text-lg mt-2'>ThapaSoft</span>
             </a> 
           </div>

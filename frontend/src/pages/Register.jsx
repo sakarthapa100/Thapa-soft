@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../store/auth';
 import { toast } from 'react-toastify';
-import './Register.css'
+
 export const Register = () => {
 
   const [user, setUser] = useState({
@@ -69,20 +69,20 @@ if(response.ok){
 
   return (
     <>
-     <section>
-      <main>
-<div className="section-registration">
-<div className="container grid grid-two-cols">
+     <section className='bg-gray-800 mt-[4rem] '>
+      <main className='bg-gray-800' >
+<div className="section-registration bg-gray-800 ">
+<div className="container grid grid-two-cols bg-gray-800 ">
 
   {/* //left side image  */}
-<div className="registration-image">
+<div className="registration-image bg-gray-800">
 
   <img src="/images/register.png" alt="Trying to fill registration" width="500" height="500" />
 </div>
 
 {/* //right side registration from  */}
-<div className="registration-form">
-  <h1 className='main-heading mb-3'> Registration form</h1>
+<div className="registration-form bg-gray-800 ">
+  <h1 className='text-blue-400 text-4xl font-bold mb-3'> Registration form</h1>
   <br />
 <form onSubmit={handleSubmit}>
   <div>
@@ -95,6 +95,7 @@ if(response.ok){
       autoComplete='off'
       value={user.username}
       onChange={handleInput}
+      className='p-2  '
       />
   </div>
   <div>
@@ -107,6 +108,7 @@ if(response.ok){
       autoComplete='off' 
       value={user.email}
       onChange={handleInput}
+      className='p-2'
       />
   </div>
 
@@ -122,7 +124,7 @@ if(response.ok){
       autoComplete='off' 
       value={user.phone}
       onChange={handleInput}
-      
+      className='p-2'
       />
   </div>
 
@@ -136,10 +138,11 @@ if(response.ok){
       autoComplete='off' 
       value={user.password}
       onChange={handleInput}
+      className='p-2'
       />
   </div>
 <br />
-<button type='submit' className='btn-submit'>Register Now</button>
+<button type='submit' className='bg-blue-500 p-[0.7rem] rounded-lg '>Register Now</button>
 
 </form>
 

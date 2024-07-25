@@ -76,11 +76,11 @@ else{
 
 return (
   <>
-    <section>
+    <section className='mt-[3rem] bg-gray-800'>
       <main>
-        <div className="section-registration">
+        <div className="section-registration bg-gray-800 ">
           <div className="container grid grid-two-cols">
-            <div className="registration-image reg-img">
+            <div className="registration-image reg-img bg-gray-800 ">
               <img
                 src="/images/login.png"
                 alt="a nurse with a cute look"
@@ -89,8 +89,8 @@ return (
               />
             </div>
             {/* our main registration code  */}
-            <div className="registration-form">
-              <h1 className="main-heading mb-3">Login form</h1>
+            <div className="registration-form bg-gray-800 ">
+              <h1 className="main-heading mb-3 text-blue-500 ">Login form</h1>
               <br />
               <form onSubmit={handleSubmit}>
                 <div>
@@ -99,6 +99,7 @@ return (
                     type="text"
                     name="email"
                     value={user.email}
+                    className='p-2'
                     onChange={handleInput}
                     placeholder="email"
                   />
@@ -111,11 +112,12 @@ return (
                     name="password"
                     value={user.password}
                     onChange={handleInput}
+                    className='p-2  '
                     placeholder="password"
                   />
                 </div>
                 <br />
-                <button type="submit" className="btn-submit">
+                <button type="submit" className="btn-submit bg-blue-500 ">
                   Login Now
                 </button>
               </form>

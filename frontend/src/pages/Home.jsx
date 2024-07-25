@@ -7,7 +7,7 @@ import Testimonial from '../components/Testi';
 export const Home = () => {
   return (
     <div className="bg-gray-800 text-white  ">
-      <div className='mt-[205rem] '>
+      <div className='mt-[3rem] '>
               <Hero />
       </div>
 

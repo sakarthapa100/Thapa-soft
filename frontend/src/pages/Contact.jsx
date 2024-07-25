@@ -52,16 +52,16 @@ export const Contact = () => {
   };
 
   return (
-    <section className="flex justify-center items-center min-h-screen bg-gray-800 py-16 mt-[53rem] ">
-      <main className="container mx-auto">
+    <section className="flex justify-center items-center min-h-screen bg-gray-800 py-16 mt-[4rem] ">
+      <main className="container mx-auto bg-gray-800 ">
         <div className="bg-gray-800 p-10 rounded-lg shadow-xl max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 bg-gray-800 md:grid-cols-2 gap-10">
             <div className="flex justify-center items-center">
               <img src="images/support.png" alt="Contact us" className="max-w-full h-auto rounded-lg" />
             </div>
             <section className="flex flex-col justify-center">
               <div className="mb-8 text-center">
-                <h1 className="text-white text-4xl font-bold">Contact Us</h1>
+                <h1 className="text-blue-500 text-4xl font-bold">Contact Us</h1>
               </div>
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div>
