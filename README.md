@@ -1,6 +1,6 @@
-# TechHire - Full-Stack Website
+# ThapaSoft - Full-Stack Website
 
-Welcome to TechHire! This is a full-stack web application built with the MERN stack, designed to showcase and offer hiring services for website and mobile application development.
+Welcome to ThapaSoft! This is a full-stack web application built with the MERN stack,Designed for the modern tech landscape, TechHire seamlessly integrates sophisticated frontend and backend technologies to deliver a premier platform for discovering and engaging top-tier talent for website and mobile application development.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Welcome to TechHire! This is a full-stack web application built with the MERN st
 
 ## Project Overview
 
-TechHire is a modern platform for a tech company that offers services in website and mobile application development. Users can browse the available services, get in touch with the company, and hire experts to bring their digital projects to life. The application uses React for the frontend and Node.js, Express, and MongoDB for the backend.
+ThapaSoft is a modern platform for a tech company that offers services in website and mobile application development. Users can browse the available services, get in touch with the company, and hire experts to bring their digital projects to life. The application uses React for the frontend and Node.js, Express, and MongoDB for the backend.
 
 ## Features
 
@@ -34,7 +34,7 @@ TechHire is a modern platform for a tech company that offers services in website
 
 ## Setup and Installation
 
-To get started with the TechHire project, follow these steps:
+To get started with the ThapaSoft project, follow these steps:
 
 ### Prerequisites
 
@@ -45,5 +45,5 @@ To get started with the TechHire project, follow these steps:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/techhire.git
-cd techhire
+git clone https://github.com/sakarthapa100/Thapa-soft.git
+cd Thapa-soft
