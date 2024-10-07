@@ -36,11 +36,11 @@ if(userExist) {
 
 
 
- const userCreated = await User.create({
+const userCreated = await User.create({
   username ,
-     email,
-   phone,
-   password})
+  email,
+phone,
+  password})
 
     res
     .status(201)
@@ -83,7 +83,7 @@ if(user) {
   .json({ msg: "Login Successful", 
     token: await userExist.generateToken(),
 
-     userId: userExist._id.toString(),
+    userId: userExist._id.toString(),
   })
 }
 else{
@@ -104,7 +104,7 @@ user logic
 */
 const user =async(req, res) => {
 try {
-   const userData = req.user
+  const userData = req.user
 console.log(userData)
 res.status(200).json({ msg: userData})
 
@@ -112,6 +112,18 @@ res.status(200).json({ msg: userData})
   console.log(`error from the user route ${error}`)
 }
 }
+/*************  ✨ Codeium Command 🌟  *************/
+// ---------forgot password
+const forgetPassword = async (req, res, next) => {
+  const user = await User.findOne({ email: req.body.email }).select('_id');
+  if (!user) return res.status(404).json({ message: 'User not found' });
+  next();
+};
 
 
-module.exports= {home, register , login, user}
+const resetPassword = async(req,res, next)=>{
+
+}
+
+
+module.exports= {home, register , login, user, forgetPassword, resetPassword}

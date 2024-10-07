@@ -19,5 +19,9 @@ router.route('/login').post(validate(loginSchema),authcontroller.login)
 
 router.route("/user").get( authMiddleware, authcontroller.user)
 
+router.route('/forgetPassword').post(authcontroller.forgetPassword)
+
+router.route('/resetPassword').post(authcontroller.resetPassword)
+
 
 module.exports= router
