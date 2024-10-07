@@ -5,9 +5,7 @@ const authcontroller = require("../controllers/auth-controller")
 const {signupSchema, loginSchema} = require('../validators/auth-validators')
 const validate = require('../middlewares/validate-middleware')
 const authMiddleware = require("../middlewares/auth-middleware")
-// router.get('/', (req, res ) => {
-//   res.status(200).send("This is from the router ")
-// })
+
 
 router.route('/').get(authcontroller.home)
 
