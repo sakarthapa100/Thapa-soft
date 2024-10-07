@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from "../store/auth"; // Ensure this path is correct
+import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from "../store/auth"; 
 
 import {  toast } from 'react-toastify';
 import './Login.css'
@@ -121,6 +121,11 @@ return (
                   Login Now
                 </button>
               </form>
+              <div className="mt-4">
+                <Link to="/forgetpassword" className="text-blue-500 hover:underline">
+                  Forgot Password?
+                </Link>
+              </div>
             </div>
           </div>
         </div>

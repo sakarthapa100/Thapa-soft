@@ -5,7 +5,7 @@ export const Service = () => {
   const { services } = useAuth();
 
   return (
-    <section className="py-12 bg-gray-800 mt-[5rem]">
+    <section className="py-12 bg-gray-800 mt-[5rem] mb-[rem] ">
       <div className="container mx-auto p-[9rem] grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[4rem]">
         {services.map((service, index) => (
           <div

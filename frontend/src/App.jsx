@@ -9,6 +9,7 @@ import { Logout } from "./pages/Logout";
 import { Register} from './pages/Register'
 import { Service } from "./pages/Service";
 import Navbar from "./components/Navbar";
+import  ForgetPassword  from "./pages/ForgetPassword";
 import AdminLayout from "./components/layouts/AdminLayout";
 import { AdminUsers } from "./pages/admins/AdminUsers";
 import { AdminContacts } from "./pages/admins/AdminContacts";
@@ -33,6 +34,7 @@ const App = ()=>{
         <Route path="/logout" element={<Logout />} />
         <Route path="/about" element={<About />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgetpassword" element={<ForgetPassword />} />
        
         <Route path="/admin" element={<AdminLayout />}>
       
